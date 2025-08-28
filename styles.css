@@ -1,2 +1,93 @@
 
 /* Your CSS Code here. */
+/* Basic styles for the accessible portfolio */
+:root{
+  --bg: #ffffff;
+  --text: #111827;
+  --accent: #0b74de;
+}
+
+* { box-sizing: border-box; }
+body {
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  margin: 0;
+  color: var(--text);
+  background: var(--bg);
+  line-height: 1.4;
+  padding: 1rem;
+}
+
+/* Skip link */
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: auto;
+  background: #000;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  z-index: 100;
+}
+.skip-link:focus {
+  left: 1rem;
+  top: 1rem;
+  border-radius: 4px;
+}
+
+/* Navigation */
+.site-nav {
+  margin-bottom: 1rem;
+}
+.nav-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  gap: 0.75rem;
+}
+.nav-list a {
+  text-decoration: none;
+  color: var(--accent);
+  padding: 0.25rem 0.5rem;
+}
+.nav-list a:focus,
+.nav-list a:hover {
+  outline: 2px solid #cfe9ff;
+  outline-offset: 2px;
+}
+
+/* Hero / heading */
+.hero h1 {
+  margin: 0 0 0.75rem 0;
+  font-size: 1.6rem;
+}
+
+/* About */
+.about {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+.profile-photo {
+  border-radius: 8px;
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+}
+
+/* Project list */
+.project-list {
+  margin-top: 0.25rem;
+  padding-left: 1.25rem; /* visible marker for list */
+}
+
+/* Footer */
+.site-footer {
+  margin-top: 2rem;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  * { transition: none !important; }
+}
